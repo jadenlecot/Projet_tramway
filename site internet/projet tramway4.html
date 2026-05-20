@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Projet STI2D - Station Relais</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        html{
+            scroll-behavior:smooth;
+        }
+
+        body{
+            margin:0;
+            font-family:'Poppins', sans-serif;
+            background:linear-gradient(135deg,#141e30,#243b55);
+            color:white;
+            overflow-x:hidden;
+        }
+
+        /* Effets lumineux */
+        body::before{
+            content:"";
+            position:fixed;
+            width:100%;
+            height:100%;
+            background:
+            radial-gradient(circle at top left, rgba(0,255,200,0.15), transparent 30%),
+            radial-gradient(circle at bottom right, rgba(0,140,255,0.12), transparent 30%);
+            z-index:-1;
+        }
+
+        header{
+            text-align:center;
+            padding:80px 20px;
+        }
+
+        header h1{
+            font-size:3.5em;
+            margin-bottom:10px;
+            background:linear-gradient(90deg,#00F5A0,#00D9F5);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+        }
+
+        header p{
+            color:#d0d0d0;
+        }
+
+        nav{
+            position:sticky;
+            top:0;
+            z-index:1000;
+            background:rgba(0,0,0,0.5);
+            backdrop-filter:blur(10px);
+            padding:15px;
+            text-align:center;
+            border-bottom:1px solid rgba(255,255,255,0.1);
+        }
+
+        nav a{
+            color:#00F5A0;
+            text-decoration:none;
+            margin:0 15px;
+            font-weight:500;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            color:white;
+            text-shadow:0 0 10px #00F5A0;
+        }
+
+        section{
+            max-width:1000px;
+            margin:auto;
+            padding:80px 20px;
+            animation:fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn{
+            from{
+                opacity:0;
+                transform:translateY(40px);
+            }
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+        }
+
+        h2{
+            color:#00F5A0;
+            margin-bottom:25px;
+            font-size:2em;
+        }
+
+        /* Accordéons */
+        .accordion{
+            width:100%;
+            background:rgba(255,255,255,0.08);
+            color:white;
+            border:none;
+            outline:none;
+            text-align:left;
+            padding:18px;
+            margin-top:15px;
+            border-radius:12px;
+            cursor:pointer;
+            font-size:16px;
+            transition:0.3s;
+            backdrop-filter:blur(10px);
+        }
+
+        .accordion:hover{
+            background:rgba(0,245,160,0.2);
+            transform:scale(1.01);
+        }
+
+        .panel{
+            max-height:0;
+            overflow:hidden;
+            transition:max-height 0.4s ease;
+            background:rgba(255,255,255,0.05);
+            border-radius:10px;
+            margin-top:5px;
+        }
+
+        .panel-content{
+            padding:20px;
+        }
+
+        /* Images */
+        .real-image{
+            width:100%;
+            border-radius:15px;
+            margin-top:15px;
+            transition:0.3s;
+            box-shadow:0 0 20px rgba(0,245,160,0.25);
+        }
+
+        .real-image:hover{
+            transform:scale(1.01);
+            box-shadow:0 0 25px rgba(0,245,160,0.45);
+        }
+
+        .image{
+            width:100%;
+            height:220px;
+            background:rgba(255,255,255,0.08);
+            border:2px dashed rgba(255,255,255,0.2);
+            border-radius:10px;
+            margin-top:15px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:#bdbdbd;
+        }
+
+        footer{
+            text-align:center;
+            padding:30px;
+            color:#aaaaaa;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🚋 Station Relais</h1>
+    <p>Projet STI2D - Parking vers Tramway</p>
+</header>
+
+<nav>
+    <a href="#analyse">Analyse</a>
+    <a href="#preliminaire">Conception Préliminaire</a>
+    <a href="#detaillee">Conception Détaillée</a>
+    <a href="#prototype">Maquettage</a>
+    <a href="#test">Tests</a>
+</nav>
+
+<!-- ANALYSE -->
+<section id="analyse">
+
+    <h2>📋 Analyse du cahier des charges et planification</h2>
+
+    <button class="accordion">📌 Diagramme de cas d’utilisation</button>
+    <div class="panel">
+        <div class="panel-content">
+            <img src="Diagramme_de_cas_d'utilisation.png" width="500">
+        </div>
+    </div>
+
+    <button class="accordion">📊 Diagrammes des exigences et bloc</button>
+    <div class="panel">
+        <div class="panel-content">
+            <img src="Diagrammes_des_exigences_et_bloc.png" width="500">
+        </div>
+    </div>
+
+    <button class="accordion">🔍 Analyse des solutions existantes</button>
+    <div class="panel">
+        <div class="panel-content">
+            <img src="Analyse_des_solutions_existantes.png" class="real-image">
+		</div>
+    </div>
+
+    <button class="accordion">📅 Planning et organisation du groupe</button>
+    <div class="panel">
+        <div class="panel-content">
+            <img src="Planning_et_organisation_du_groupe.png" class="real-image">
+		<p>Planning et organisation du groupe 2</p>
+			<img src="Planning_et_organisation_du_groupe_2.png" class="real-image">
+        </div>
+    </div>
+
+</section>
+
+<!-- CONCEPTION PRELIMINAIRE -->
+<section id="preliminaire">
+
+    <h2>🛠️ Conception Préliminaire</h2>
+
+    <button class="accordion">✏️ Esquisse de la station</button>
+    <div class="panel">
+        <div class="panel-content">
+            <img src="chaine_information.png" class="real-image">
+        </div>
+    </div>
+
+    <button class="accordion">📦 Liste des fournitures et composants</button>
+    <div class="panel">
+        <div class="panel-content">
+            <img src="Liste_des_fournitures_et_composants.png" class="real-image">
+        </div>
+    </div>
+
+    <!-- IMAGE AJOUTÉE -->
+    <button class="accordion">⚡ Chaîne d’information et de puissance</button>
+
+    <div class="panel">
+        <div class="panel-content">
+
+            <p>Organisation de la chaîne d'information et de puissance.</p>
+
+            <img src="Chaîne_d’information_et_de_puissance.png" class="real-image">
+
+        </div>
+    </div>
+
+</section>
+
+<!-- CONCEPTION DETAILLEE -->
+<section id="detaillee">
+
+    <h2>💻 Conception Détaillée</h2>
+
+    <button class="accordion">🔌 Jumeau numérique Tinkercad</button>
+    <div class="panel">
+        <div class="panel-content">
+            <img src="Jumeau_numérique_Tinkercad.png" class="real-image">
+        </div>
+    </div>
+
+    <button class="accordion">📐 Schéma électrique</button>
+    <div class="panel">
+        <div class="panel-content">
+            <img src="Schéma_électrique.png" class="real-image">
+        </div>
+    </div>
+
+    <!-- IMAGE AJOUTÉE -->
+    <button class="accordion">🧠 Algorigramme</button>
+
+    <div class="panel">
+        <img src="Algorigramme.png" class="real-image">
+		
+
+        </div>
+    </div>
+
+    <button class="accordion">⌨️ Programme Arduino C++</button>
+    <div class="panel">
+        <div class="panel-content">
+            <img src="Programme_Arduino_C++.png" class="real-image">
+        </div>
+    </div>
+
+    <button class="accordion">🖨️ Modèle 3D</button>
+    <div class="panel">
+        <div class="panel-content">
+            <img src="Modèle_3D.png" class="real-image">
+        </div>
+    </div>
+
+</section>
+
+<!-- MAQUETTAGE -->
+<section id="prototype">
+
+    <h2>🏗️ Maquettage / Prototypage</h2>
+
+    <button class="accordion">⚙️ Programme final assemblé</button>
+    <div class="panel">
+        <div class="panel-content">
+            <img src="Programme_final_assemblé.png" class="real-image">
+        </div>
+    </div>
+
+    <button class="accordion">📸 Photos du prototype</button>
+    <div class="panel">
+        <div class="panel-content">
+
+            <img src="Photos_du_prototype.png" class="real-image">
+
+        </div>
+    </div>
+
+</section>
+
+<!-- TEST -->
+<section id="test">
+
+    <h2>✅ Test et Validation</h2>
+
+    <button class="accordion">🧪 Protocole de test</button>
+    <div class="panel">
+        <div class="panel-content">
+           <video width="500" controls>
+  <source src="Protocole_de_test.mp4" type="video/mp4">
+</video>
+        </div>
+    </div>
+
+    <button class="accordion">📈 Résultats des tests</button>
+    <div class="panel">
+        <div class="panel-content">
+            
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    <p>Projet STI2D - 2026</p>
+</footer>
+
+<script>
+
+const accordions = document.querySelectorAll(".accordion");
+
+accordions.forEach(acc => {
+
+    acc.addEventListener("click", function(){
+
+        const panel = this.nextElementSibling;
+
+        if(panel.style.maxHeight){
+            panel.style.maxHeight = null;
+        } else {
+
+            document.querySelectorAll(".panel").forEach(p => {
+                p.style.maxHeight = null;
+            });
+
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
