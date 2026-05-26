@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Projet STI2D - Station Relais</title>
+    <title>STI2D Project - Relay Station</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
@@ -21,7 +21,7 @@
             overflow-x:hidden;
         }
 
-        /* Effets lumineux */
+        /* Light effects */
         body::before{
             content:"";
             position:fixed;
@@ -98,7 +98,7 @@
             font-size:2em;
         }
 
-        /* Accordéons */
+        /* Accordions */
         .accordion{
             width:100%;
             background:rgba(255,255,255,0.08);
@@ -172,81 +172,119 @@
 <body>
 
 <header>
-    <h1>🚋 Station Relais</h1>
-    <p>Projet STI2D - Parking vers Tramway</p>
+    <h1>🚋 Relay Station</h1>
+    <p>STI2D Project - Parking to Tramway</p>
 </header>
 
 <nav>
-    <a href="#analyse">Analyse</a>
-    <a href="#preliminaire">Conception Préliminaire</a>
-    <a href="#detaillee">Conception Détaillée</a>
-    <a href="#prototype">Maquettage</a>
+    <a href="#presentation">Presentation</a>
+    <a href="#analyse">Analysis</a>
+    <a href="#preliminaire">Preliminary Design</a>
+    <a href="#detaillee">Detailed Design</a>
+    <a href="#prototype">Prototype</a>
     <a href="#test">Tests</a>
 </nav>
 
-<!-- ANALYSE -->
-<section id="analyse">
+<!-- PRESENTATION -->
+<section id="presentation">
 
-    <h2>📋 Analyse du cahier des charges et planification</h2>
+    <h2>🌍 Project Presentation</h2>
 
-    <button class="accordion">📌 Diagramme de cas d’utilisation</button>
+    <button class="accordion">🚋 The Project</button>
+
     <div class="panel">
         <div class="panel-content">
-            <img src="Diagramme_de_cas_d'utilisation.png" width="500">
+
+            <p>
+                This project consists of creating an intelligent relay station
+                connecting a parking lot to a tramway station in order to facilitate
+                urban transportation.
+            </p>
+
+            <p>
+                The system improves access to public transportation
+                through automated and secure management.
+            </p>
+
+           <img src="Le_projet.png" class="real-image">
+            </div>
+
         </div>
     </div>
 
-    <button class="accordion">📊 Diagrammes des exigences et bloc</button>
-    <div class="panel">
-        <div class="panel-content">
-            <img src="Diagrammes_des_exigences_et_bloc.png" width="500">
-        </div>
-    </div>
+    <button class="accordion">✅ Advantages</button>
 
-    <button class="accordion">🔍 Analyse des solutions existantes</button>
     <div class="panel">
         <div class="panel-content">
-            <img src="Analyse_des_solutions_existantes.png" class="real-image">
-		</div>
-    </div>
 
-    <button class="accordion">📅 Planning et organisation du groupe</button>
-    <div class="panel">
-        <div class="panel-content">
-            <img src="Planning_et_organisation_du_groupe.png" class="real-image">
-		<p>Planning et organisation du groupe 2</p>
-			<img src="Planning_et_organisation_du_groupe_2.png" class="real-image">
+            <img src="Les_avantages.png" class="real-image">
+                Advantages image to add
+            </div>
+
         </div>
     </div>
 
 </section>
 
-<!-- CONCEPTION PRELIMINAIRE -->
-<section id="preliminaire">
+<!-- ANALYSIS -->
+<section id="analyse">
 
-    <h2>🛠️ Conception Préliminaire</h2>
+    <h2>📋 Specification Analysis and Planning</h2>
 
-    <button class="accordion">✏️ Esquisse de la station</button>
+    <button class="accordion">📌 Use Case Diagram</button>
     <div class="panel">
         <div class="panel-content">
-            <img src="chaine_information.png" class="real-image">
+            <img src="Diagramme_de_cas_d’utilisation.png" class="real-image">
         </div>
     </div>
 
-    <button class="accordion">📦 Liste des fournitures et composants</button>
+    <button class="accordion">📊 Requirement and Block Diagrams</button>
+    <div class="panel">
+        <div class="panel-content">
+            <img src="Diagrammes_des_exigences_et_bloc.png" class="real-image">
+        </div>
+    </div>
+
+    <button class="accordion">🔍 Analysis of Existing Solutions</button>
+    <div class="panel">
+        <div class="panel-content">
+
+            <img src="Analyse_des_solutions_existantes.png" class="real-image">
+
+            <img src="Analyse_des_solutions_existantes_2.png" class="real-image">
+
+        </div>
+    </div>
+
+    <button class="accordion">📅 Group Planning and Organization</button>
+    <div class="panel">
+        <div class="panel-content">
+
+            <img src="Planning_et_organisation_du_groupe.png" class="real-image">
+
+            <img src="Planning_et_organisation_du_groupe_2.png" class="real-image">
+
+        </div>
+    </div>
+
+</section>
+
+<!-- PRELIMINARY DESIGN -->
+<section id="preliminaire">
+
+    <h2>🛠️ Preliminary Design</h2>
+
+    <button class="accordion">📦 Supplies and Components List</button>
     <div class="panel">
         <div class="panel-content">
             <img src="Liste_des_fournitures_et_composants.png" class="real-image">
         </div>
     </div>
 
-    <!-- IMAGE AJOUTÉE -->
-    <button class="accordion">⚡ Chaîne d’information et de puissance</button>
+    <button class="accordion">⚡ Information and Power Chain</button>
 
     <div class="panel">
         <div class="panel-content">
-
-            <p>Organisation de la chaîne d'information et de puissance.</p>
 
             <img src="Chaîne_d’information_et_de_puissance.png" class="real-image">
 
@@ -255,43 +293,43 @@
 
 </section>
 
-<!-- CONCEPTION DETAILLEE -->
+<!-- DETAILED DESIGN -->
 <section id="detaillee">
 
-    <h2>💻 Conception Détaillée</h2>
+    <h2>💻 Detailed Design</h2>
 
-    <button class="accordion">🔌 Jumeau numérique Tinkercad</button>
+    <button class="accordion">🔌 Tinkercad Digital Twin</button>
     <div class="panel">
         <div class="panel-content">
             <img src="Jumeau_numérique_Tinkercad.png" class="real-image">
         </div>
     </div>
 
-    <button class="accordion">📐 Schéma électrique</button>
+    <button class="accordion">📐 Electrical Diagram</button>
     <div class="panel">
         <div class="panel-content">
             <img src="Schéma_électrique.png" class="real-image">
         </div>
     </div>
 
-    <!-- IMAGE AJOUTÉE -->
-    <button class="accordion">🧠 Algorigramme</button>
+    <button class="accordion">🧠 Flowchart</button>
 
     <div class="panel">
-        <img src="Algorigramme.png" class="real-image">
-		
+        <div class="panel-content">
+
+            <img src="Algorigramme.png" class="real-image">
 
         </div>
     </div>
 
-    <button class="accordion">⌨️ Programme Arduino C++</button>
+    <button class="accordion">⌨️ Arduino C++ Program</button>
     <div class="panel">
         <div class="panel-content">
             <img src="Programme_Arduino_C++.png" class="real-image">
         </div>
     </div>
 
-    <button class="accordion">🖨️ Modèle 3D</button>
+    <button class="accordion">🖨️ 3D Model</button>
     <div class="panel">
         <div class="panel-content">
             <img src="Modèle_3D.png" class="real-image">
@@ -300,19 +338,19 @@
 
 </section>
 
-<!-- MAQUETTAGE -->
+<!-- PROTOTYPE -->
 <section id="prototype">
 
-    <h2>🏗️ Maquettage / Prototypage</h2>
+    <h2>🏗️ Modeling / Prototyping</h2>
 
-    <button class="accordion">⚙️ Programme final assemblé</button>
+    <button class="accordion">⚙️ Final Assembled Program</button>
     <div class="panel">
         <div class="panel-content">
             <img src="Programme_final_assemblé.png" class="real-image">
         </div>
     </div>
 
-    <button class="accordion">📸 Photos du prototype</button>
+    <button class="accordion">📸 Prototype Photos</button>
     <div class="panel">
         <div class="panel-content">
 
@@ -326,28 +364,33 @@
 <!-- TEST -->
 <section id="test">
 
-    <h2>✅ Test et Validation</h2>
+    <h2>✅ Testing and Validation</h2>
 
-    <button class="accordion">🧪 Protocole de test</button>
+    <button class="accordion">🧪 Test Protocol</button>
     <div class="panel">
         <div class="panel-content">
-           <video width="500" controls>
-  <source src="Protocole_de_test.mp4" type="video/mp4">
-</video>
+
+            <video controls width="600">
+            <source src="Protocole_de_test.mp4" type="video/mp4">
+            </video>
+
         </div>
     </div>
 
-    <button class="accordion">📈 Résultats des tests</button>
+    <button class="accordion">📈 Test Results</button>
     <div class="panel">
         <div class="panel-content">
-            
+
+           
+            </div>
+
         </div>
     </div>
 
 </section>
 
 <footer>
-    <p>Projet STI2D - 2026</p>
+    <p>STI2D Project - 2026</p>
 </footer>
 
 <script>
